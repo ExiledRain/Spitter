@@ -1,4 +1,4 @@
-<%@ taglib prefix="c" uri="http://www.springframework.org/tags" %>
+<%@ taglib prefix="c" uri="java.sun.com/jsp/jstl/core" %>
 <%@page session="false" %>
 <%--
   Created by IntelliJ IDEA.
