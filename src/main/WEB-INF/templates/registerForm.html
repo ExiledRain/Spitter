@@ -24,6 +24,9 @@
     </label>:
     <input type="text" th:field="*{lastName}" th:class="${#fields.hasErrors('lastName')} ?'error'"/></br>
 
+    <label>Profile Picture</label>:
+        <input type="file" name="profilePicture" accept="image/jpeg,image/png,image/gif"></br>
+
     <label th:class="${#fields.hasErrors('username')}? 'error'">
     Username
     </label>:

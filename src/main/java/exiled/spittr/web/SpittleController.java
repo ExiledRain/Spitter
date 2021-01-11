@@ -2,14 +2,13 @@ package exiled.spittr.web;
 
 import exiled.spittr.Spittle;
 import exiled.spittr.data.SpittleRepository;
+import exiled.spittr.exceptions.DuplicateSpittleException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
 
+import java.util.Date;
 import java.util.List;
 
 @Controller
@@ -40,4 +39,12 @@ public class SpittleController {
         model.addAttribute(spittleRepository.findOne(spittleId));
         return "spittle";
     }
+
+    @RequestMapping(method = RequestMethod.POST)
+    public String saveSpittle(SpittleForm form, Model model) {
+        spittleRepository.save(
+                new Spittle(null, form.getMessage(), new Date(), form.getLongitude(), form.getLatitude());
+        return "redirect:/spittles";
+    }
+
 }
