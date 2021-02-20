@@ -2,6 +2,7 @@ package exiled.spittr.data.impl;
 
 import exiled.spittr.Spitter;
 import exiled.spittr.data.SpitterRepository;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.stereotype.Component;
 
@@ -13,6 +14,7 @@ public class SpitterRepositoryImpl implements SpitterRepository {
     }
 
     @Override
+    @Cacheable("spittleCache")
     public Spitter findByUsername(String username) {
         return null;
     }
