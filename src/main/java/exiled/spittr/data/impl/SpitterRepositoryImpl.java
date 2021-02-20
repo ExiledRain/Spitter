@@ -18,4 +18,9 @@ public class SpitterRepositoryImpl implements SpitterRepository {
     public Spitter findByUsername(String username) {
         return null;
     }
+
+    @Override
+    public void remove() {
+
+    }
 }
