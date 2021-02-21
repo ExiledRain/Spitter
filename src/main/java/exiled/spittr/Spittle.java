@@ -10,6 +10,15 @@ public class Spittle {
     private Date time;
     private Double latitude;
     private Double longitude;
+    private Spitter spitter;
+
+    public Spitter getSpitter() {
+        return spitter;
+    }
+
+    public void setSpitter(Spitter spitter) {
+        this.spitter = spitter;
+    }
 
     public Spittle(String message, Date time) {
         this(message, time, null, null);
@@ -24,8 +33,9 @@ public class Spittle {
         this.longitude = longitude;
         this.latitude = latitude;
     }
+
     public Spittle(
-            Long l,String message, Date time, Double longitude, Double latitude
+            Long l, String message, Date time, Double longitude, Double latitude
     ) {
         this.id = l;
         this.message = message;
