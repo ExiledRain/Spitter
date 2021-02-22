@@ -3,7 +3,6 @@ package exiled.spittr.config;
 import org.springframework.web.WebApplicationInitializer;
 
 import javax.servlet.Registration;
-import javax.servlet.Servlet;
 import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 

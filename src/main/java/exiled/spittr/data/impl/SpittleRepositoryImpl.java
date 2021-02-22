@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
 import java.util.List;
 
 @Component
-public class SpittleRepositoryImpl implements SpittleRepository {
+public class SpittleRepositoryImpl extends com.caucho.hessian.server.HessianServlet implements SpittleRepository {
     @Override
     public List<Spittle> findSpittles(long max, int count) {
         return null;
